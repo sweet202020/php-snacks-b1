@@ -29,10 +29,10 @@ $campionato = [
     ],
 ];
 foreach ($campionato as $key => $value) {
-    echo $value['home'];
-    echo $value['away'];
-    echo $value['home_points'];
-    echo $value['away_points'];
+    echo $home_team = $value['home'];
+    echo $away_team = $value['away'];
+    echo $home_points = $value['home_points'];
+    echo $away_points = $value['away_points'];
 }
 ?>
 
@@ -47,7 +47,18 @@ foreach ($campionato as $key => $value) {
 </head>
 
 <body>
-
+    <h3>
+        squadra di casa : <?= $home_team ?>
+    </h3>
+    <h3>
+        squadra in trasferta : <?= $away_team ?>
+    </h3>
+    <h3>
+        punti squadra di casa : <?= $home_points ?>
+    </h3>
+    <h3>
+        punti squadra in trasferta : <?= $away_points ?>
+    </h3>
 </body>
 
 </html>
