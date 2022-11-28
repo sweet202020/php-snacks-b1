@@ -1,7 +1,13 @@
 <!-- Con un form passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
  -->
 
-
+<?php
+if (strlen($_GET['name']) < 4) {
+    echo 'inserire almeno 4 caratteri';
+} else {
+    echo $_GET['name'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,8 +21,8 @@
 <body>
     <form action="index.php" method="get">
         <input type="text" name="name" id="name" placeholder="alessio">
-        <input type="email" name="email" id="email" placeholder="dolcealessio.2001@gmail.com">
-        <input type="number" name="age" id="age" placeholder="21">
+        <input type="text" name="email" id="email" placeholder="dolcealessio.2001@gmail.com">
+        <input type="text" name="age" id="age" placeholder="21">
         <button type="submit">invia</button>
         <button type="reset">riprova</button>
     </form>
